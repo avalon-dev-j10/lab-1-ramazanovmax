@@ -2,19 +2,23 @@ package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.models.Person;
 
-public class Main {
-
-    Main() {
-
+class Main {
+   public static void main(String args[]){
         /*
-         * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
+         * FIXME(Студент):OK Измените определение метода так, чтобы он стал точкой входа в приложение.
          */
 
-        Person ivanov = null;
-        Person smith = null;
+        Person ivanov = new Person("Иванов", "Иван", "Иванович");
+        Person smith = new Person("John", "Edvard", "", "Smith");
+        
+        ivanov.setAddress("Москва");
+        smith.setAddress("London");
+        
+        ivanov.setAddress("Москва");
+        smith.setAddress("London");
 
         /*
-         * TODO(Студент): Создайте экземпляры класса 'Person'
+         * TODO(Студент):OK Создайте экземпляры класса 'Person'
          *
          * 1. Проинициализируейте переменную 'ivanov', так,
          *    чтобы она адресовала объект типа 'Person'
@@ -25,8 +29,9 @@ public class Main {
          *    описывающий человека по имени 'John Edvard Smith'.
          */
 
+        
         /*
-         * TODO(Студент): Создайте несколько строковых переменных:
+         * TODO(Студент):ОК Создайте несколько строковых переменных:
          *
          * 1. Строковую переменную, содержащую полное имя
          *    человека, описанного объектом, адресованным
@@ -44,12 +49,23 @@ public class Main {
          *    человека, описанного объектом, адресованным
          *    переменной 'smith'.
          */
+        String ivanovName = ivanov.getFullName();
+        String ivanovAddress = ivanov.getAddress();
+        
+        
+        String smithName = smith.getFullName();      
+        String smithAddress = smith.getAddress();
+       
 
         /*
-         * TODO(Студент): Выведите в консоль значения созданных строковых переменных:
+         * TODO(Студент):ОК Выведите в консоль значения созданных строковых переменных:
          *
          * Значение каждой переменной должно быть выведено на
          * отдельной строке.
          */
+        System.out.println(ivanovName);
+        System.out.println(ivanovAddress);
+        System.out.println(smithName);
+        System.out.println(smithAddress);
     }
 }

@@ -1,5 +1,7 @@
 package ru.avalon.java.dev.j10.labs.models;
 
+import ru.avalon.java.dev.j10.labs.commons.Address;
+
 /**
  * Представление о человеке.
  * <p>
@@ -12,13 +14,50 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 public class Person {
-
+    
+    private Address address;
+    private Passport passport;
+    
+    public Person(String falmiliya, String imya, String otchestvo, String vtoroeimya){
+        this.passport = new Passport(falmiliya,  imya, otchestvo, vtoroeimya);
+    }
+    
+    public Person(String falmiliya, String imya, String otchestvo){
+        this.passport = new Passport(falmiliya,  imya, otchestvo);
+    }
+    
+    public Person(String falmiliya, String imya){   
+        this.passport = new Passport(falmiliya,  imya);
+        
+    }
+    
+    /**
+     *
+     * @param number
+     */
+    public void setPassport(String number){
+        this.passport.number = number;
+    }
+    
+    public void setBirthday(String birthday){
+        this.passport.birthday = birthday;
+    }
+    
+        
+    public void setIssueDate(String issueDate){
+        this.passport.issueDate = issueDate;
+    }
+        
+    public void setIssueAddress(String issueAddress){
+        this.passport.issueAddress = issueAddress;
+    };
+        
     /*
-     * TODO(Студент): Создайте класс Address.
+     * TODO(Студент):ОК Создайте класс Address.
      *
-     * 1. Добавте файл в пакет ru.avalon.java.dev.j10.labs.commons.
+     * 1.OK Добавте файл в пакет ru.avalon.java.dev.j10.labs.commons.
      *
-     * 2. Создайте класс, видимый из пакета. Подумайте о том
+     * 2.OK Создайте класс, видимый из пакета. Подумайте о том
      *    Какое имя должен иметь класс, если он объявленн в этом
      *    файле.
      *
@@ -47,10 +86,19 @@ public class Person {
      * @return имя человека в виде строки.
      */
     public String getFullName() {
+       String fullName;
+       if("" != this.passport.otchestvo){
+           fullName = this.passport.imya+" "+this.passport.falmiliya+" "+this.passport.otchestvo;           
+       }else if("" != this.passport.vtoroeimya){
+           fullName = this.passport.imya+" "+this.passport.vtoroeimya.charAt(0)+". "+this.passport.falmiliya;       
+       }else{
+            fullName = this.passport.imya+" "+this.passport.falmiliya;       
+       }
         /*
-         * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
+         * TODO(Студент):ОК Закончить определение метода 'getFullName()' класса 'Person'
          */
-        return null;
+       //System.out.println(fullName);
+        return fullName;
     }
 
     /**
@@ -63,8 +111,12 @@ public class Person {
      */
     public String getAddress() {
         /*
-         * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
+         * TODO(Студент):ОК Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
+        //System.out.println(this.address.getAddress());
+        return this.address.getAddress();
+    }
+    public void setAddress(String address){
+        this.address = new Address(address);
     }
 }

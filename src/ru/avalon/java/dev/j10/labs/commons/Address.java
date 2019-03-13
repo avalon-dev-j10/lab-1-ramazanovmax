@@ -1,9 +1,22 @@
+package ru.avalon.java.dev.j10.labs.commons;
+
+public class Address{
+
+    public String addres;
+
+    public Address(String addres){
+        this.addres = addres;
+    }
+    public String getAddress(){
+        return this.addres;
+    }
+}
 /*
- * TODO(Студент): Создайте класс Address.
+ * TODO(Студент):ОК Создайте класс Address.
  *
- * 1. Добавте файл в пакет ru.avalon.java.dev.j10.labs.commons.
+ * 1.OK Добавте файл в пакет ru.avalon.java.dev.j10.labs.commons.
  *
- * 2. Создайте класс, видимый из пакета. Подумайте о том
+ * 2.OK Создайте класс, видимый из пакета. Подумайте о том
  *    Какое имя должен иметь класс, если он объявленн в этом
  *    файле.
  *

@@ -16,9 +16,38 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 class Passport {
+    public String number;
+    public String birthday;
+    public String issueDate;
+    public String issueAddress;
+    
+    public String falmiliya;
+    public String imya;
+    public String otchestvo;
+    public String vtoroeimya;
+    
+    public Passport(String falmiliya, String imya, String otchestvo, String vtoroeimya){
+        this.falmiliya = falmiliya;
+        this.imya = imya;
+        this.otchestvo = otchestvo;
+        this.vtoroeimya = vtoroeimya;
+    }
+    
+    public Passport(String falmiliya, String imya, String otchestvo){
+        this.falmiliya = falmiliya;
+        this.imya = imya;
+        this.otchestvo = otchestvo;
+    }
+    
+    
+    public Passport(String falmiliya, String imya){
+        this.falmiliya = falmiliya;
+        this.imya = imya;
+    }
+    
 
     /*
-     * TODO(Студент): Закончить определение класса.
+     * TODO(Студент):ОК Закончить определение класса.
      *
      * 1. Объявить атрибуты класса.
      *
