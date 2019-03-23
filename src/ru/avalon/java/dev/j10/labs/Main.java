@@ -15,7 +15,8 @@ class Main {
         smith.setAddress("London");
         
         ivanov.setAddress("Москва");
-        smith.setAddress("London");
+        smith.setAddress("London"); 
+       
 
         /*
          * TODO(Студент):OK Создайте экземпляры класса 'Person'
@@ -28,6 +29,7 @@ class Main {
          *    чтобы она адресовала объект типа 'Person'
          *    описывающий человека по имени 'John Edvard Smith'.
          */
+       
 
         
         /*
